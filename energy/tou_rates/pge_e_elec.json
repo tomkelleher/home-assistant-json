@@ -1,0 +1,98 @@
+{
+  "seasons": [
+    {
+      "name": "summer",
+      "start_date": "06-01",
+      "end_date": "09-30",
+      "rates": {
+        "peak": {
+          "value": 0.61418,
+          "unit": "USD/kWh"
+        },
+        "part_peak": {
+          "value": 0.4523,
+          "unit": "USD/kWh"
+        },
+        "off_peak": {
+          "value": 0.39562,
+          "unit": "USD/kWh"
+        }
+      },
+      "tou_period": {
+        "peak": [
+          {
+            "start_time": "16:00:00",
+            "end_time": "20:59:59"
+          }
+        ],
+        "part_peak": [
+          {
+            "start_time": "15:00:00",
+            "end_time": "15:59:59"
+          },
+          {
+            "start_time": "21:00:00",
+            "end_time": "23:59:59"
+          }
+        ],
+        "off_peak": [
+          {
+            "start_time": "00:00:00",
+            "end_time": "14:59:59"
+          }
+        ]
+      }
+    },
+    {
+      "name": "winter",
+      "start_date": "10-01",
+      "end_date": "05-31",
+      "rates": {
+        "peak": {
+          "value": 0.38266,
+          "unit": "USD/kWh"
+        },
+        "part_peak": {
+          "value": 0.36057,
+          "unit": "USD/kWh"
+        },
+        "off_peak": {
+          "value": 0.34671,
+          "unit": "USD/kWh"
+        }
+      },
+      "tou_period": {
+        "peak": [
+          {
+            "start_time": "17:00:00",
+            "end_time": "20:59:59"
+          }
+        ],
+        "part_peak": [
+          {
+            "start_time": "07:00:00",
+            "end_time": "08:59:59"
+          },
+          {
+            "start_time": "21:00:00",
+            "end_time": "22:59:59"
+          }
+        ],
+        "off_peak": [
+          {
+            "start_time": "00:00:00",
+            "end_time": "06:59:59"
+          },
+          {
+            "start_time": "09:00:00",
+            "end_time": "16:59:59"
+          },
+          {
+            "start_time": "23:00:00",
+            "end_time": "23:59:59"
+          }
+        ]
+      }
+    }
+  ]
+}

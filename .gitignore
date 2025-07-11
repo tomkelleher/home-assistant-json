@@ -1,0 +1,58 @@
+
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Trashes
+.Spotlight-V100
+.fseventsd
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+ENV/
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# VS Code
+.vscode/
+
+# Logs and temp files
+*.log
+*.bak
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# YAML editor backups
+*.yaml~
+
+# Home Assistant
+home-assistant.log
+home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+secrets.yaml
+deps/
+storage/
+*.db
+*.db-journal
