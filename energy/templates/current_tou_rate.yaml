@@ -1,0 +1,31 @@
+template:
+  - sensor:
+      - name: "Current TOU Rate"
+        state: >
+          {% set now = now() %}
+          {% set seasons = state_attr('sensor.tou_rate_plan', 'seasons') %}
+          {% if not seasons %}
+            unavailable
+          {% else %}
+            {% set current_month_day = now.strftime('%m-%d') %}
+            {% set season = seasons
+              | selectattr('start_date', 'le', current_month_day)
+              | selectattr('end_date', 'ge', current_month_day)
+              | list
+              | first %}
+            {% if not season %}
+              unknown
+            {% else %}
+              {% set current_time = now.strftime('%H:%M:%S') %}
+              {% set period = 'off_peak' %}
+              {% for label, periods in season.tou_period.items() %}
+                {% for p in periods %}
+                  {% if p.start_time <= current_time <= p.end_time %}
+                    {% set period = label %}
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+              {{ season.rates[period].value }}
+            {% endif %}
+          {% endif %}
+        unit_of_measurement: "USD/kWh"
