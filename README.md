@@ -8,12 +8,14 @@ A collection of helper files for use with Home Assistant, including:
 
 ## Structure
 
+```
 home-assistant-json/
 ├── energy/
-│ └── tou_rates/
-│ └── pge_e_elec.json
+│   └── tou_rates/
+│       └── pge_e_elec.json
 ├── sensors/
-│ └── dyson-air-quality-levels.json
+│   └── dyson-air-quality-levels.json
+```
 
 ## Usage
 
